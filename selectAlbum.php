@@ -14,12 +14,13 @@
 	use Facebook\Entities\AccessToken;
 	use Facebook\HttpClients\FacebookCurlHttpClient;
 	use Facebook\HttpClients\FacebookHttpable;
-    const id = "655929951177597";
-    const mdp = "940eb8e8b0bf529790b9848120094052";
+	
+    const id = "1468256266797643";
+    const mdp = "5598726dd2d32c30ca7e11b7eeb68016";
 	
 	FacebookSession::setDefaultApplication(id, mdp);
 	
-	$redirectLoginUrl = "https://epic-pic-contest.herokuapp.com/";
+	$redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
 	
 	$helper = new FacebookRedirectLoginHelper($redirectLoginUrl);
 	
@@ -67,7 +68,7 @@
     <script>
         window.fbAsyncInit = function () {
           FB.init({
-            appId: '655929951177597',
+            appId: '1468256266797643',
             xfbml: true,
             version: 'v2.3'
           });
