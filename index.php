@@ -2,7 +2,7 @@
   ini_set("display_errors", 1);
   require 'vendor/autoload.php';
   session_start();
-
+  print_r("ddddddddddddddd")
   use Facebook\FacebookSession;
   use Facebook\FacebookRedirectLoginHelper;
   use Facebook\FacebookRequest;
