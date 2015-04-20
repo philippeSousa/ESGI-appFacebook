@@ -1,7 +1,6 @@
-<!DOCTYPE html>
   <?php
-  $helper = new FacebookRedirectLoginHelper($redirectLoginUrl);
-  var_dump($helper);
+ $helper = new FacebookRedirectLoginHelper($redirectLoginUrl);
+
   if (isset($_SESSION) && isset($_SESSION['fb_token'])) {
       $session = new FacebookSession($_SESSION['fb_token']);
   } else {
