@@ -35,6 +35,7 @@ switch($uc)
 {
 	case 'accueil':
 	{ 
+    print_r("dans laccueil");
 		include('vues/v_accueil.php');
 		break;
 	}
