@@ -3,7 +3,7 @@
   ini_set("display_errors", 1);
   require 'vendor/autoload.php';
   session_start();
-  
+
   use Facebook\FacebookSession;
   use Facebook\FacebookRedirectLoginHelper;
   use Facebook\FacebookRequest;
@@ -22,40 +22,7 @@ FacebookSession::setDefaultApplication(id, mdp);
 
 $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
 ?>
-<!DOCTYPE html>
-<html>
 
-<head>
-<meta charst="uth-8">
-  <title>Application ESGI facebook</title>
-  <meta name="description" content="">
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1468256266797643',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/fr_FR/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-</head>
-
-<body>
-<H2>localhost</H2>
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
   <?php
   $helper = new FacebookRedirectLoginHelper($redirectLoginUrl);
@@ -81,21 +48,22 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
       //transform la data graphObject
       $user = $response->getGraphObject("Facebook\GraphUser");
 
-      
+        
   } else {
-      // show login url
+      // show login url with permissions
       $loginUrl = $helper->getLoginUrl(['user_photos']);
   }
   
 ?>
 <!DOCTYPE html>
+<H2>localhost</H2>
 <html>
     <head>
         <title> Localhost !</title>
         <script>
             window.fbAsyncInit = function () {
                 FB.init({
-                    appId: '655929951177597',
+                    appId: '1468256266797643',
                     xfbml: true,
                     version: 'v2.3'
                 });
@@ -125,7 +93,7 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
         <?php
         if (isset($session)) {
             echo "Bonjour " . $user->getName();
-            echo "<a href='upload.php'> Je veux participer au concours en uploadant une photo !</a>";
+            echo "<a href='selectAlbum.php'> Je veux participer au concours en uploadant une photo !</a>";
         } else {
             echo "<a href='" . $loginUrl . "'>Se connecter pour have fun with us !!!!</a>";
         }
