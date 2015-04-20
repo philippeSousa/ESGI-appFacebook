@@ -49,7 +49,8 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
       // show login url with permissions
       $loginUrl = $helper->getLoginUrl(['user_photos']);
   }
-  
+
+
 ?>
 <!DOCTYPE html>
 <H2>localhost</H2>
@@ -89,7 +90,7 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
         <?php
         if (isset($session)) {
             echo "Bonjour " . $user->getName();
-            echo "<a href='selectAlbum.php'> Je veux participer au concours en uploadant une photo !</a>";
+            echo "<a href='vues/selectAlbum.php'> Je veux participer au concours en uploadant une photo !</a>";
         } else {
             echo "<a href='" . $loginUrl . "'>Se connecter pour have fun with us !!!!</a>";
         }
