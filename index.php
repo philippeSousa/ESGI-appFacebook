@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<?php session_start();
-require_once 'vendor\facebook\php-sdk-v4\autoload.php';
+<?php   error_reporting(E_ALL);
+  ini_set("display_errors", 1);
+  require 'vendor/autoload.php';
+  session_start();
+  
   use Facebook\FacebookSession;
   use Facebook\FacebookRedirectLoginHelper;
   use Facebook\FacebookRequest;
