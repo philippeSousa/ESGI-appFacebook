@@ -17,7 +17,7 @@ const id = "1468256266797643";
 const mdp = "5598726dd2d32c30ca7e11b7eeb68016";
 FacebookSession::setDefaultApplication(id, mdp);
 
-$redirectLoginUrl = "http://localhost/ESGI appFacebook";
+$redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
 ?>
 <!DOCTYPE html>
 <html>
