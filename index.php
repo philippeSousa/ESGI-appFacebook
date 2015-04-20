@@ -95,9 +95,6 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
             echo "<a href='" . $loginUrl . "'>Se connecter pour have fun with us !!!!</a>";
         }
         ?>
-<form method="post">
-  
-</form>
 
 
 </body>
