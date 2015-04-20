@@ -53,5 +53,6 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
 
   ?>
   <h2>Upload d'une ptin d'img</h2>
-
+<form method="post" action="receptionImg.php" enctype="multipart/form-data">
   <input type="file" name="icone" id="icone" /><br />
+  </form>

@@ -90,7 +90,7 @@ $redirectLoginUrl = "https://esgifacebook.herokuapp.com/";
         <?php
         if (isset($session)) {
             echo "Bonjour " . $user->getName();
-            echo "<a href='vues/selectAlbum.php'> Je veux participer au concours en uploadant une photo !</a>";
+            echo "<a href='Vues/selectAlbum.php'> Je veux participer au concours en uploadant une photo !</a>";
         } else {
             echo "<a href='" . $loginUrl . "'>Se connecter pour have fun with us !!!!</a>";
         }
